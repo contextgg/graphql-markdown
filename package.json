@@ -27,8 +27,8 @@
     "test-coverage": "jest --coverage",
     "format": "prettier-eslint --write \"src/**/*.js\"",
     "prepare": "npm run rollup:build",
-    "rollup:build": "BABEL_ENV=build rollup -c",
-    "rollup:watch": "BABEL_ENV=build rollup -c -w"
+    "rollup:build": "cross-env BABEL_ENV=build rollup -c",
+    "rollup:watch": "cross-env BABEL_ENV=build rollup -c -w"
   },
   "dependencies": {
     "glob": "^7.1.2",
@@ -52,6 +52,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-runtime": "^6.26.0",
     "core-js": "^2.5.5",
+    "cross-env": "^5.2.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
