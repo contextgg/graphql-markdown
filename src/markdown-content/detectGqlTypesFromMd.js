@@ -24,8 +24,8 @@ const detectGraphQLType = ({ kind, tag, relativeFileName }) => {
         case 'tag:yaml.org,2002:float':
           return 'Float';
         // TODO: Uncomment once we decide to support Date in GQL
-        // case 'tag:yaml.org,2002:timestamp':
-        //   return 'Date';
+        case 'tag:yaml.org,2002:timestamp':
+          return 'DateTime';
         // case 'tag:yaml.org,2002:null':
         //   return 'null';
         default: {
